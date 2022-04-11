@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This PC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="tabs">
+            <button class="tab-btn active" id="file" onclick="file()">File</button><button class="tab-btn" id="computer" onclick="computer()">Computer</button><button class="tab-btn" id="view" onclick="view()">View</button>
+        </div>
+        <div class="nav">
+            <div class="icons">
+                <abbr title="Back to Quick Access (Alt + Left Arrow)"><i class="fa-solid fa-arrow-left icon"></i></abbr>
+                <abbr title="Forward (Alt + Right Arrow)"><i class="fa-solid fa-arrow-right icon"></i></abbr>
+                <abbr title="Recent Locations"><i class="fa-solid fa-angle-down icon less"></i></abbr>
+                <abbr title='Up to "Desktop" (Alt + Up Arrow)'><i class="fa-solid fa-arrow-up icon header-hover"></i></abbr>
+            </div>
+            <div class="centre-nav">
+                <div class="main">
+                    <img src="img/this.png" alt="" class="icon-img">
+                    <i class="fa-solid fa-angle-right icon less header-hover"></i>
+                    <span class="header-hover this">This PC</span>
+                    <abbr title="Previous Location"><i class="header-hover fa-solid fa-angle-down icon less right"></i></abbr>
+                </div>
+            </div>
+            <div class="refresh">
+                <abbr title='Refresh "This PC" (F5)'><i class="header-hover fa-solid fa-rotate-right sicon"></i></abbr>
+            </div>
+            <div class="search">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass sicon"></i>
+                </div>
+                <div class="search-box">
+                    <input type="search" name="search" id="search" placeholder="Search This PC">
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="head" onclick="showfolder()">
+            <i class="header-hover fa-solid fa-angle-down icon showicon" id="showiconf"></i><h3 class="mainHead">Folders (7)</h3>
+        </div>
+        <div class="folders" id="folders">
+            <div class="folders-items header-hover">
+                <img src="img/3d.png" alt="" class="items-img">
+                <span>3D Objects</span>
+            </div>
+            <div class="folders-items header-hover">
+                <img src="img/desktop.png" alt="" class="items-img">
+                <span>Desktop</span>
+            </div>
+                <div class="folders-items header-hover">
+                    <img src="img/documents.png" alt="" class="items-img">
+                    <span>Documents</span>
+                </div>
+                <div class="folders-items header-hover">
+                    <img src="img/downloads.png" alt="" class="items-img">
+                    <span>Downloads</span>
+                </div>
+                <div class="folders-items header-hover">
+                    <img src="img/music.png" alt="" class="items-img">
+                    <span>Music</span>
+                </div>
+                <div class="folders-items header-hover">
+                    <img src="img/pictures.png" alt="" class="items-img">
+                    <span>Pictures</span>
+                </div>
+                <div class="folders-items header-hover">
+                    <img src="img/videos.png" alt="" class="items-img">
+                    <span>Videos</span>
+                </div>
+        </div>
+
+        <div class="head" onclick="showdrive()">
+            <i class="header-hover fa-solid fa-angle-down icon" id="showicond"></i><h3 class="mainHead">Devices and drives (4)</h3>
+        </div>
+       <div class="folders" id="drives">
+           <div class="drive-items header-hover">
+            <div class="drive-img">
+                <img src="img/cdisk.png" alt="" class="items-img">
+            </div>
+            <div class="drive-content">
+                <span>Local Disk (C:)</span>
+                <progress min = "0" max="116" value="108" class="red"></progress>
+                <p class="grey">7.27GB free of 116GB</p>
+            </div>
+           </div>
+           <div class="drive-items header-hover">
+            <div class="drive-img">
+                <img src="img/drive.png" alt="" class="items-img">
+            </div>
+            <div class="drive-content">
+                <span>Local Disk (E:)</span>
+                <progress min = "0" max="156" value="149" class="red"></progress>
+                <p class="grey">6.33GB free of 156GB</p>
+            </div>
+           </div>
+           <div class="drive-items header-hover">
+            <div class="drive-img">
+                <img src="img/drive.png" alt="" class="items-img">
+            </div>
+            <div class="drive-content">
+                <span>Local Disk (F:)</span>
+                <progress min = "0" max="192" value="168" class="red"></progress>
+                <p class="grey">24GB free of 192GB</p>
+            </div>
+           </div>
+       </div>
+    </main>
+    <script src="folderndrives.js"></script>
+    <script src="tab.js"></script>
+    <script src="https://kit.fontawesome.com/b6b84c2b8a.js" crossorigin="anonymous"></script>
+</body>
+</html>
